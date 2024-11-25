@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import PostCard from "../components/PostCard";
+import ActivitiesCard from "../components/ActivitiesCard";
 
 function HomePage() {
     const navbar = [
@@ -32,9 +33,9 @@ function HomePage() {
             <header className="w-full flex items-center justify-between p-6 mb-9">
                 {/* Profile */}
                 <div className="flex items-center">
-                    <img src="/ProfileUlil.png" className="w-14 h-14 rounded-full"/>
-                    <div className="flex flex-col">        
-                        <h2 className="font-bold text-2xl ml-2">Hello, LilAbshar</h2>
+                    <img src="/ProfileUlil.png" className="w-16 h-16 rounded-full"/>
+                    <div className="flex flex-col ml-5">        
+                        <h2 className="font-bold text-2xl">Hello, LilAbshar</h2>
                         <p className="">Let's make a new achievement</p>
                     </div>
                 </div>
@@ -50,7 +51,6 @@ function HomePage() {
                         <img src="/location.svg" className="w-6 h-6 pr-2"/>
                         <p className="font-bold text-2xl">Depok, Indonesia</p>
                     </div>
-                    
                 </div>
             </header>
             {/* Main Content */}
@@ -62,13 +62,19 @@ function HomePage() {
                     ))}
                 </div>
                 {/* Content */}
-                <div className="flex-grow flex flex-col items-center justify-center">
-                    {/* Main */}
-                    <main className="flex flex-col items-center justify-center">
-                        {postcards.map((item, index) => (
-                            <PostCard key={index} item={item} />
-                        ))}
-                    </main>
+                <div className="flex-grow flex flex-col items-center justify-start">
+                    <div className="flex items-start">
+                        {/* Main */}
+                        <main className="flex flex-col items-center justify-start">
+                            {postcards.map((item, index) => (
+                                <PostCard key={index} item={item} />
+                            ))}
+                        </main>
+                        {/* Activities */}
+                        <aside className="ml-8">
+                            <ActivitiesCard />
+                        </aside>
+                    </div>
                     {/* Footer */}
                     <footer>
                     </footer>
