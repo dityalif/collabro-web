@@ -62,6 +62,9 @@ module.exports = {
         "darkGreen" : "#0A5D39",
         "light" : "#F8FAFC",
       },
+      fontSize: {
+        xxs: '0.625rem', // 10px
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

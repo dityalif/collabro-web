@@ -17,6 +17,10 @@ import kotak from "../assets/Profile/kotak.svg";
 import kotakmodal from "../assets/Profile/kotakModal.svg";
 import post from "../assets/Profile/post.svg";
 import SearchBar from "../components/SearchBar.jsx";
+// import RecentCard from "../components/RecentCard.jsx";
+// import FriendCard from "../components/FriendCard.jsx";
+import ActivitiesCard from "../components/ActivitiesCard.jsx";
+
 
 Modal.setAppElement('#root');
 
@@ -93,6 +97,8 @@ function Profile() {
         },
     ]);
 
+
+
     const handlePost = () => {
         const newCompetition = {
             image: "/fotoProject.png",
@@ -129,10 +135,13 @@ function Profile() {
         ));
     };
 
+
+
+
     return (
-        <div className="relative w-full h-screen font-figtree overflow-auto ">
+        <div className="relative w-full h-screen font-figtree overflow-auto flex flex-col lg:flex-row">
             <div
-                className="absolute top-0 left-0 w-full h-36"
+                className="absolute top-0 left-0 w-full h-36 "
                 style={{
                     backgroundImage: `url(${Banana})`,
                     backgroundSize: 'cover',
@@ -145,14 +154,14 @@ function Profile() {
                     </svg>
                 </button>
             </div>
-            <div className="parent p-8 pb-10  ">
-                <div className="orang flex items-start absolute top-[50px] pb-10 text-black mt-10">
+            <div className="parent p-8 pb-10 flex-1">
+                <div className="orang flex flex-col lg:flex-row items-start lg:relative top-[50px] pb-10 text-black mt-10">
                     <img
                         src={ulil}
                         alt="Example"
-                        className="scale-90 rounded-full mb-2"
+                        className="scale-90 rounded-full mb-2  "
                     />
-                    <div className="info flex flex-col items-start ml-8 ">
+                    <div className="info flex flex-col items-start ml-0 lg:ml-8 mt-4 lg:mt-0">
                         <div className="flex items-center">
                             <img src={lokasi} alt="Location" className="w-4 h-4 mr-1" />
                             {isEditing ? (
@@ -263,7 +272,8 @@ function Profile() {
                             <rect y="14.4878" width="12.5122" height="12.5122" rx="1.97561" fill="#D9D9D9"/>
                             </svg>
                         </button>
-                        <div className="Past Experience grid grid-cols-2 gap-6">
+                        {/* BISA DIJADIIN COMPONENT */}
+                        <div className="Past Experience grid grid-cols-1 md:grid-cols-2 gap-6">
                             {renderCompetitionCards()}
                             <button onClick={openModal} className="createOpp w-auto text-left hover:scale-105 duration-500">
                                 <div className="max-w-sm rounded-3xl drop-shadow-lg shadow-black overflow-hidden mt-6 bg-white">
@@ -274,6 +284,7 @@ function Profile() {
                                 </div>
                             </button>
                         </div>
+                        {/* BISA DIJADIIN COMPONENT */}
                         <Modal
                             isOpen={modalIsOpen}
                             onRequestClose={closeModal}
@@ -296,7 +307,7 @@ function Profile() {
                                     type="text"
                                     value={modalDescriptionValue}
                                     onChange={(e) => setModalDescriptionValue(e.target.value)}
-                                    className="desc text-greyy text-sm p-2 border-greenish border-2 rounded-xl w-1/2 bg-light"
+                                    className="desc text-greyy text-sm p-2 border-greenish border-2 rounded-xl w-full md:w-1/2 bg-light"
                                 />
                                 <div className="mt-10">
                                     <p className="opacity-60 ml-1">What are you looking for: </p>
@@ -326,7 +337,10 @@ function Profile() {
                         </Modal>
                     </div>
                 </div>
-                <div className="kanan">
+            </div>
+            <div className="kanan w-full lg:w-1/4 mt-40 mr-8">
+                <div className="">
+                    {/* <ActivitiesCard /> */}
                 </div>
             </div>
         </div>
