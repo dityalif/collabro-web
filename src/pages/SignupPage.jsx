@@ -17,7 +17,7 @@ function SignupPage() {
             <div className="md:w-1/2 flex justify-center items-center px-4 py-8 md:p-0">
                 <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-300 p-6 sm:p-8 md:p-12">
                     <h1 className="text-2xl md:text-3xl font-bold font-figtree text-green-600 text-center mb-6 md:mb-8">
-                        Hey, Welcome Back
+                        Let's Get Started
                     </h1>
                     
                     <form className="space-y-4 md:space-y-6">
@@ -47,16 +47,27 @@ function SignupPage() {
                                 className="block w-full mt-1 p-2 md:p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-green-500 focus:border-green-500 text-sm"
                                 required
                             />
-                            <a href="/forgot-password" className="text-sm text-green-600 hover:text-green-700 mt-2 block text-right font-figtree">
-                                Forgot Password?
-                            </a>
+                        </div>
+
+                        <div>
+                            <label htmlFor="password" className="block text-sm font-medium font-figtree text-gray-900">
+                                Confirm Password
+                            </label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                className="block w-full mt-1 p-2 md:p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-green-500 focus:border-green-500 text-sm"
+                                required
+                            />
                         </div>
 
                         <button
                             type="submit"
                             className="w-full bg-green-600 hover:bg-green-700 text-white font-figtree font-medium py-2 md:py-2.5 rounded-xl shadow-md transition-colors duration-200"
                         >
-                            Log In
+                            Sign Up
                         </button>
 
                         <div className="flex items-center my-4">
@@ -79,9 +90,9 @@ function SignupPage() {
                     </form>
 
                     <p className="text-sm text-center font-figtree text-gray-600 mt-6 md:mt-8">
-                        Don't have an account?  
-                        <a href="/signup" className="text-green-600 font-medium font-figtree hover:text-green-700 font-figtree">
-                            Sign Up
+                        Already have an account?  
+                        <a href="/login" className="text-green-600 font-medium font-figtree hover:text-green-700 font-figtree">
+                            Login
                         </a>
                     </p>
                 </div>
