@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
 
-function App() {
+function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <Navbar />
+      <header className='items-center text-center'>
+        <h1 className='text-green-800'>Welcome to Collabro</h1>
       </header>
+      <main>
+        <p>This is a simple homepage for Collabro.</p>
+      </main>
+      <footer>
+        <p>&copy; 2023 Collabro. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
 
-export default App;
+export default HomePage;
