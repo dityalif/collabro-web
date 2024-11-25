@@ -51,7 +51,7 @@ function Profile() {
         setSelectedTags(selectedTags.filter(t => t !== tag));
     };
 
-    const competitionData = [
+    const [competitionData, setCompetitionData] = useState([
         {
             image: "/fotoLomba.png",
             modal : "/modalLomba.png",
@@ -91,7 +91,28 @@ function Profile() {
                 "/avatar-3.png",
             ],
         },
-    ];
+    ]);
+
+    const handlePost = () => {
+        const newCompetition = {
+            image: "/fotoProject.png",
+            modal: "/modalLomba.png",
+            title: modalTitleValue,
+            description: modalDescriptionValue,
+            tags: selectedTags,
+            avatars: [
+                "/avatar.png",
+                "/avatar-1.png",
+                "/avatar-2.png",
+                "/avatar-3.png",
+            ],
+        };
+        setCompetitionData([...competitionData, newCompetition]);
+        setModalTitleValue('');
+        setModalDescriptionValue('');
+        setSelectedTags([]);
+        closeModal();
+    };
 
     const renderCompetitionCards = () => {
         return competitionData.map((competition, index) => (
@@ -295,7 +316,7 @@ function Profile() {
                                     <SearchBar onTagSelect={handleTagSelect} />
                                 </div>
                                 <div className="flex justify-end mt-8">
-                                <button onClick={closeModal} className="bg-greenish font-bold text-2xl hover:bg-darkGreen duration-300 transition-transform hover:scale-110 text-white px-4 py-1 rounded-xl flex items-center">
+                                <button onClick={handlePost} className="bg-greenish font-bold text-2xl hover:bg-darkGreen duration-300 transition-transform hover:scale-110 text-white px-4 py-1 rounded-xl flex items-center">
                                     <img src={post} className="mr-2" alt="Post" />
                                     <p>Post</p>
                                 </button>
