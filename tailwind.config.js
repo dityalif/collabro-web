@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        figtree: ["Figtree", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,6 +54,10 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "greyy": "#979797",
+        "greyish" : "#3D405B",
+        "lightGreen" : "E6FFF3",
+        "greenish" : "00AA5B",
       },
       borderRadius: {
         lg: "var(--radius)",
