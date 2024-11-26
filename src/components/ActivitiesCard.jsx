@@ -43,7 +43,7 @@ function ActivitiesCard({ item }) {
     ];
 
     return (
-        <div className='bg-green-50 rounded-3xl p-5 w-full'>
+        <div className='bg-green-50 rounded-3xl p-8 w-full'>
             {/* Recent Card */}
             <h2 className='font-bold text-2xl mb-5'>Recent Activities</h2>
             {recentcard.map((item, index) => (

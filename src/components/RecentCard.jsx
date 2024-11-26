@@ -2,7 +2,7 @@ import React from 'react';
 
 function RecentCard({ item }) {
     return (
-        <div className='bg-white p-5 flex-col rounded-2xl w-96 mb-5'>
+        <div className='bg-white p-3 flex-col rounded-2xl w-88 mb-5'>
             <div className='flex items-center'>
                 <img src={item.img} className='w-16 h-auto rounded-2xl shadow-lg' alt='Picture'/>
                 <h3 className='text-base font-bold px-5'>{item.title}</h3>

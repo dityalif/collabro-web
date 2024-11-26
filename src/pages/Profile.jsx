@@ -172,7 +172,7 @@ function Profile() {
                                     className="city text-greyy text-sm"
                                 />
                             ) : (
-                                <p className="city text-greyy text-sm">{location}</p>
+                                <p className="city text-greyy text-sm lg:text-sm sm:text-xxs">{location}</p>
                             )}
                         </div>
                         {isEditing ? (
@@ -183,7 +183,7 @@ function Profile() {
                                 className="font-figtree text-3xl font-extrabold mt-1"
                             />
                         ) : (
-                            <p className="font-figtree text-3xl font-extrabold mt-1">{name}</p>
+                            <p className="font-figtree text-3xl font-extrabold mt-1 lg:text-3xl sm:text-xxs">{name}</p>
                         )}
                         {isEditing ? (
                             <input
@@ -193,7 +193,7 @@ function Profile() {
                                 className="specialty text-greyish opacity-60 mt-1"
                             />
                         ) : (
-                            <p className="specialty text-greyish opacity-60 mt-1">{specialty}</p>
+                            <p className="specialty text-greyish opacity-60 mt-1 lg:text-sm sm:text-xxs">{specialty}</p>
                         )}
                         <div className="links flex flex-row mt-4">
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
@@ -218,7 +218,7 @@ function Profile() {
                                     style={{  width: '', textAlign: 'left', height: '150px', resize: 'none' }}
                                 />
                             ) : (
-                                <p className="deskripsi" style={{ maxWidth: '500px', textAlign: 'left' }}>
+                                <p className="deskripsi lg:text-sm sm:text-xxs" style={{ maxWidth: '500px', textAlign: 'left' }}>
                                     {isExpanded ? description : `${description.substring(0, 75)}...`}
                                     {isExpanded && (
                                         <button 
@@ -340,7 +340,7 @@ function Profile() {
             </div>
             <div className="kanan w-full lg:w-1/4 mt-40 mr-8">
                 <div className="">
-                    {/* <ActivitiesCard /> */}
+                    <ActivitiesCard />
                 </div>
             </div>
         </div>
