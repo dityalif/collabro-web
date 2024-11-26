@@ -28,17 +28,20 @@ function ActivitiesCard({ item }) {
         {
             img: '/Recent/esun.png',
             name: 'Esun',
-            uname: '@esun'
+            uname: '@esun',
+            role: 'UI/UX Designers'
         },
         {
             img: '/Recent/ssantario.png',
             name: 'Rivi Yasha',
-            uname: '@maboirivi'
+            uname: '@maboirivi',
+            role: 'UI/UX Designers'
         },
         {
             img: '/Recent/ditya.png',
             name: 'Ditya',
-            uname: '@raditss'
+            uname: '@raditss',
+            role: 'Web Development'
         }
     ];
 
