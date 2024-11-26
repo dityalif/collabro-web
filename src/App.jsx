@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-      {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
       <AnimatedOutlet />
     </>
   );

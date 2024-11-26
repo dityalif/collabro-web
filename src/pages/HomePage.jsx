@@ -4,16 +4,6 @@ import PostCard from "../components/PostCard";
 import ActivitiesCard from "../components/ActivitiesCard";
 
 function HomePage() {
-    const navbar = [
-        {
-            linkHome: '#',
-            home: '/Navbar/homeActive.png',
-            linkNoti: '/notification',
-            noti: '/Navbar/notification.svg',
-            linkProfile: '/profile',
-            profile: '/Navbar/profile.svg'
-        }
-    ]
     const postcards = [
         {
             img: '/Home/LesunHome.png',
@@ -59,9 +49,7 @@ function HomePage() {
             <div className="flex flex-grow">
                 {/* Navbar */}
                 <div className="flex-none w-14 flex items-center justify-start mx-7">
-                    {navbar.map((item, index) => (
-                        <Navbar key={index} item={item} />
-                    ))}
+                    <Navbar />
                 </div>
                 {/* Content */}
                 <div className="flex-grow flex flex-col items-center justify-start">

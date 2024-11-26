@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignupPage() {
+    const navigate = useNavigate();
+
     return (
         <div className="flex flex-col md:flex-row min-h-screen bg-white">
             <div className="md:w-1/2 flex flex-col justify-center items-center p-6 md:p-10 text-center">
@@ -65,6 +68,7 @@ function SignupPage() {
 
                         <button
                             type="submit"
+                            onClick={() => navigate('/home')}
                             className="w-full bg-green-600 hover:bg-green-700 text-white font-figtree font-medium py-2 md:py-2.5 rounded-xl shadow-md transition-colors duration-200"
                         >
                             Sign Up
