@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import Profile from './pages/Profile.jsx'
 import SignupPage from './pages/SignupPage.jsx'
+import Esun from './pages/Esun.jsx'
+import Search from './pages/Search.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
     {
         path: "/signup",
         element: <SignupPage />
+    },
+    {
+        path: "/profile/esun",
+        element : <Esun/>
+    },
+    {
+        path: "/search",
+        element: <Search/>
     }
 
     ],

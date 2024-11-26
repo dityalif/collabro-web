@@ -1,28 +1,33 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import PostCard from "../components/PostCard";
+import SearchCard from "../components/SearchCard"
 import ActivitiesCard from "../components/ActivitiesCard";
 
 function HomePage() {
     const navbar = [
         {
-            linkHome: '#',
-            home: '/Navbar/homeActive.png',
-            linkNoti: '/notification',
-            noti: '/Navbar/notification.svg',
+            linkHome: '/home',
+            home: '/Navbar/home.svg',
+            linkNoti: '#',
+            noti: '/Navbar/notiActive.svg',
             linkProfile: '/profile',
             profile: '/Navbar/profile.svg'
         }
     ]
-    const postcards = [
+    const searchcard = [
         {
-            img: '/Home/LesunHome.png',
+            img: '/Search/lesunSearch.png',
             title: 'Lomba Innoverse',
             desc: 'Hi ! Kami adalah sebuah tim dari Universitas Indonesia, sedang mencari UI/UX designers untuk lomba ... see more'
         },
         {
-            img: '/Home/OlimHome.png',
-            title: 'Lomba OLIM Ulil',
+            img: '/Search/innoverseSearch1.png',
+            title: 'Lomba Innoverse',
+            desc: 'Hi ! Kami adalah sebuah tim dari Universitas Indonesia, sedang mencari UI/UX designers untuk lomba ... see more'
+        },
+        {
+            img: '/Search/innoverseSearch2.png',
+            title: 'Lomba Innoverse',
             desc: 'Hi ! Kami adalah sebuah tim dari Universitas Indonesia, sedang mencari UI/UX designers untuk lomba ... see more'
         }
     ];
@@ -40,11 +45,6 @@ function HomePage() {
                         <h2 className="font-bold text-2xl">Hello, LilAbshar</h2>
                         <p className="">Let's make a new achievement</p>
                     </div>
-                </div>
-                {/* Search Bar */}
-                <div className="relative mx-4 w-96 hover:scale-110 transition">
-                    <input type="text" placeholder="Find your next opportunities..." className="text-sm w-full p-2 pl-10 rounded-full h-11"/>
-                    <img src="/search.svg" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6"/>
                 </div>
                 {/* Location */}
                 <div className="justify-start">
@@ -68,14 +68,10 @@ function HomePage() {
                     <div className="flex items-start">
                         {/* Main */}
                         <main className="flex flex-col items-center justify-start">
-                            {postcards.map((item, index) => (
-                                <PostCard key={index} item={item} />
+                            {searchcard.map((item, index) => (
+                                <SearchCard key={index} item={item} />
                             ))}
                         </main>
-                        {/* Activities */}
-                        <aside className="ml-8">
-                            <ActivitiesCard />
-                        </aside>
                     </div>
                     {/* Footer */}
                     <footer>
