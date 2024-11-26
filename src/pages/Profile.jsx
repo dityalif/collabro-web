@@ -25,6 +25,7 @@ import ActivitiesCard from "../components/ActivitiesCard.jsx";
 Modal.setAppElement('#root');
 
 function Profile() {
+    
     const navigate = useNavigate();
     const [isExpanded, setIsExpanded] = useState(false);
     const [isEditing, setIsEditing] = useState(false);

@@ -10,7 +10,6 @@ function App() {
 
   // Define routes where Navbar should not be displayed
   const noNavbarRoutes = ['/profile'];
-
   return (
     <>
       {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
@@ -18,5 +17,4 @@ function App() {
     </>
   );
 }
-
 export default App;
