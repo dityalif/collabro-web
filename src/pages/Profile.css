@@ -1,0 +1,4 @@
+.twitter-icon img:hover {
+  filter: invert(35%) sepia(94%) saturate(362%) hue-rotate(83deg)
+    brightness(92%) contrast(89%);
+}

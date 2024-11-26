@@ -91,7 +91,7 @@ function SignupPage() {
 
                     <p className="text-sm text-center font-figtree text-gray-600 mt-6 md:mt-8">
                         Already have an account?  
-                        <a href="/login" className="text-green-600 font-medium font-figtree hover:text-green-700 font-figtree">
+                        <a href="/login" className="text-green-600 font-medium font-figtree hover:text-green-700 ">
                             Login
                         </a>
                     </p>
