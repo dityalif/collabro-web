@@ -12,7 +12,6 @@ function App() {
   const noNavbarRoutes = ['/profile'];
   return (
     <>
-      {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
       <AnimatedOutlet />
     </>
   );
